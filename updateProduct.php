@@ -8,8 +8,10 @@
 		$_CODE = $_POST['CODE'];
 		if ($_CODE === $code_upd_product) {
 			$indexFirst = 0;
+			$id = $_POST['id'];
 
 			$query = "UPDATE product SET ";
+
 
 			if (isset($_POST['idCatalog'])) {
 				$idCatalog = $_POST['idCatalog'];
@@ -71,20 +73,25 @@
 				}
 			}
 
+
+
 			if (isset($_POST['qty'])) {
 				$qty = $_POST['qty'];
+	
+				$query_getQty = "SELECT qty FROM product WHERE id = '$id'";
+				$data_getQty = mysqli_query($connect, $query_getQty);
+				$row_getQty = mysqli_fetch_assoc($data_getQty);
+				$qty_product = $row_getQty['qty'] + $qty;
+
 				if ($indexFirst == 0) {
 					$indexFirst = 1;
-					$query = $query . " qty = '$qty' ";
+					$query = $query . " qty = '$qty_product' ";
 				} else {
-					$query = $query . ", qty = '$qty' ";
+					$query = $query . ", qty = '$qty_product' ";
 				}
 			}
 
-			if (isset($_POST['id'])) {
-				$id = $_POST['id'];
-				$query = $query . " WHERE id = '$id' ";
-			}
+			$query = $query . " WHERE id = '$id' ";
 
 			if (mysqli_query($connect, $query)) {
 				echo "update_success";
@@ -110,6 +117,4 @@
 			}
 		}		
 	}
-
-
 ?>
