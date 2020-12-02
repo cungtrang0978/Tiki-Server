@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 30, 2020 at 08:46 AM
+-- Generation Time: Dec 02, 2020 at 10:31 PM
 -- Server version: 10.3.25-MariaDB-log-cll-lve
 -- PHP Version: 7.3.6
 
@@ -588,7 +588,15 @@ INSERT INTO `orders` (`id`, `idTransact`, `idProduct`, `qty`, `amount`) VALUES
 (323, 130, 15, 1, 12000000),
 (324, 128, 29, 1, 10950000),
 (325, 128, 13, 1, 9000000),
-(327, 106, 20, 1, 47500000);
+(327, 106, 20, 1, 47500000),
+(328, 132, 14, 1, 10000000),
+(329, 132, 36, 1, 10500000),
+(330, 132, 47, 1, 38000000),
+(331, 133, 63, 2, 18000000),
+(332, 133, 65, 1, 8000000),
+(333, 133, 66, 3, 22500000),
+(334, 134, 20, 1, 47500000),
+(337, 135, 76, 1, 9000000);
 
 -- --------------------------------------------------------
 
@@ -628,13 +636,13 @@ INSERT INTO `product` (`id`, `idCatalog`, `name`, `description`, `price`, `disco
 (11, 4, 'Xiaomi Redmi 8A', 'Xiaomi Redmi 8A là một chiếc smartphone nổi bật trong phân khúc giá rẻ với nhiều ưu điểm như pin khủng, chip Snapdragon mới, camera AI và màn hình giọt nước thời thượng.', 2290000, 0, 0, 3, 20, 0, 0),
 (12, 4, 'Xiaomi Redmi 8 (3GB/32GB)', 'Những sản phẩm của Xiaomi thường trang bị cấu hình mạnh mẽ trong tầm giá, camera nhiều tính năng và viên pin \"trâu\". Xiaomi Redmi 8 3GB/32GB cũng không phải là ngoại lệ và với chiếc smartphone này Xiaomi một lần nữa khẳng định vị thế của mình trong phân khúc smartphone giá rẻ.', 2690000, 10, 0, 6, 20, 5, 1),
 (13, 1, 'Samsung Galaxy A71', 'Một sản phẩm thực sự đột phá, Samsung Galaxy A71 là tổng hòa của những công nghệ cao cấp nhất hiện nay với bộ 4 camera sau 64MP, màn hình 6,7 inch Full HD+ mãn nhãn và thời lượng pin trên cả tuyệt vời.', 10000000, 10, 0, 83, 18, 4, 1),
-(14, 1, 'Samsung Galaxy A80', 'Samsung A80 là chiếc điện thoại dẫn đầu kỷ nguyên mới với màn hình vô cực hoàn hảo, camera trượt xoay 180 độ độc đáo, cảm biến vân tay trong màn hình và những đột phá đầy ấn tượng.', 10000000, 0, 0, 22, 16, 5, 1),
+(14, 1, 'Samsung Galaxy A80', 'Samsung A80 là chiếc điện thoại dẫn đầu kỷ nguyên mới với màn hình vô cực hoàn hảo, camera trượt xoay 180 độ độc đáo, cảm biến vân tay trong màn hình và những đột phá đầy ấn tượng.', 10000000, 0, 0, 22, 15, 4, 2),
 (15, 1, 'Samsung Galaxy S10e', 'Samsung Galaxy S10e là chiếc điện thoại nhỏ gọn hoàn hảo với hiệu năng mạnh mẽ nhất, camera thay đổi khẩu độ xuất sắc và màn hình Infinity-O tuyệt mỹ.', 12000000, 0, 0, 46, 23, 3, 2),
 (16, 1, 'Samsung Galaxy Note 10 Lite', 'Chiếc Galaxy Note mới đã quay trở lại, Samsung Galaxy Note10 Lite đưa bạn đến trải nghiệm tuyệt vời của màn hình vô cực Infinity-O, bút S Pen danh tiếng, camera chuyên nghiệp và thời lượng pin dài bất tận trong một mức giá dễ chịu.', 13990000, 20, 0, 11, 20, 0, 0),
 (17, 1, 'Samsung Galaxy A31', 'Sở hữu Samsung Galaxy A31, bạn sẽ có được trải nghiệm hình ảnh không thua kém smartphone cao cấp nào với màn hình rộng 6.4 inch rực rỡ sắc nét. Ngoài ra, khả năng chụp ảnh chuyên nghiệp nhờ cụm bốn camera trên mặt lưng cũng là điểm cộng không thể bỏ qua khi nhắc tới Galaxy A31.', 6490000, 10, 0, 20, 21, 2, 1),
 (18, 1, 'Samsung Galaxy S20', 'Samsung S20 mang trên mình những tính năng cao cấp đầu bảng, với 3 camera 64MP, khả năng quay video 8K, sức mạnh phần cứng mạnh mẽ bên trong một thiết kế vô cùng di động, nhỏ gọn trong lòng bàn tay.', 21490000, 15, 0, 25, 5, 3.5, 2),
 (19, 1, 'Samsung Galaxy Note 10', 'Quyền năng thế hệ mới đã xuất hiện, Samsung Galaxy Note 10 mang đến trải nghiệm tuyệt đỉnh như máy tính trong một thiết kế gọn gàng cùng bút S Pen thông minh, tất cả đều nằm trên tay bạn.', 22990000, 10, 0, 40, 24, 0, 0),
-(20, 1, 'Samsung Galaxy Fold', 'Một chiếc điện thoại mà bạn chưa từng thấy trước đây, một chiếc điện thoại có màn hình gập độc đáo ngỡ như chỉ có ở tương lai, xin giới thiệu kỳ quan công nghệ mới mang tên Samsung Galaxy Fold.', 50000000, 5, 0, 74, 22, 5, 1),
+(20, 1, 'Samsung Galaxy Fold', 'Một chiếc điện thoại mà bạn chưa từng thấy trước đây, một chiếc điện thoại có màn hình gập độc đáo ngỡ như chỉ có ở tương lai, xin giới thiệu kỳ quan công nghệ mới mang tên Samsung Galaxy Fold.', 50000000, 5, 0, 74, 21, 5, 1),
 (21, 2, 'Điện Thoại iPhone 11 Pro Max 64GB - Hàng Chính Hãng\r\n', 'Điện thoại iPhone 11 Pro Max là phiên bản cao cấp nhất của iPhone năm nay. Sản phẩm có nhiều cải tiến nổi bật, hiệu năng, thiết kế mới đặc biệt ở phần mặt lưng và hệ thống camera.\r\niPhone 11 Pro Max có rất nhiều cải tiến về thiết kế, điểm khác biệt lớn nhất đến từ phần mặt lưng với cụm camera được thiết kế cách điệu khá to. Nhìn từ xa, thiết kế khá giống với mặt Apple Watch. Mặt dù kiểu dáng vẫn còn nhiều tranh cãi, tuy nhiên nhiều người vấn đánh giá rất cao về tính thẩm mỹ.\r\nSở hữu màn hình kích thước 6.5 inch, iPhone 11 Pro Max mang đến nhiều không gian trải nghiệm hơn. Sản phẩm được trang bị công nghệ tấm nền OLED, độ phân giải 2688 x 1242 pixels. iPhone 11 Pro Max tiếp tục được trang bị màn hình tai thỏ giống như dòng iPhone X từng gây sốt tại thời điểm mới ra mắt. Cùng với đó, các viền cạnh xung quanh máy sẽ được làm mỏng tối đa, giúp màn hình lớn hơn và mang đến những trải nghiệm thú vị hơn. Hơn thế nữa màn hình Super Retina XDR tự hào có thể điều chỉnh độ sáng để giúp bạn có những trải nghiệm hình ảnh tốt nhất. Nó đạt tới 800 nits khi bạn ra ngoài nắng - tuyệt vời để chụp và thực hiện các lựa chọn khi đang di chuyển - và lên tới 1200 nits khi bạn xem nội dung phạm vi cực kỳ động. Nó giống như có một XDR Pro Display trên iPhone của bạn.\r\n', 34000000, 15, 0, 26, 97, 0, 0),
 (22, 2, 'Điện Thoại iPhone 11 64GB - Hàng Chính Hãng\r\n', 'Điện Thoại iPhone 11 là sản phẩm kế nhiệm cho chiếc iPhone Xr từng dành được sự chú ý của giới công nghệ. Lần này, Apple vẫn đi theo những tiêu chỉ của Xr khi tạo ra iPhone 11. Đầu tiên là thiết kế trẻ trung có thể thấy được ngay trên sự đa dạng màu sắc. Hơn nhữa, những màu của iPhone 11 đều mang xu hướng phá cách, tinh nghịch. Nhưng đồng thời, màu sắc này cũng mang trong nó một sự sang trọng nhất định.\r\nMặt trước vẫn là tai thỏ thời thượng như trên những thế hệ iPhone toàn màn hình trước. Tuy vậy, ở mặt sau đã có sự chuyển biến khi mà cụm camera kép mới được đặt trong một modul hình vuông. Thiết kế 2 mặt kính, kèm viền nhôm giúp iPhone 11 có trọng lượng nhẹ, nhưng đồng thời cũng cứng cáp. Phím tắt âm được thiết kế lại thành dạng tròn và có cơ cấu gạt xuống, phù hợp hơn trong quá trình sử dụng máy.\r\nMàn hình LCD của iPhone 11 có cái tên là Liquid Retina với độ phân giải HD+. Màn hình này cho phép iPhone 11 có độ sáng tốt hơn, kèm theo đó thì với chuẩn Retina của Apple thì máy có khả năng tái hiện màu thực sự tốt. Kể cả trong những điều kiện môi trường với độ sáng gắt. Thêm vào đó, màn hình rộng cũng cho phép iPhone 11 hiển thị nhiều thông tin hơn mà lại không bị quá to để gây khó chịu khi sử dụng.\r\n', 22000000, 9, 0, 13, 100, 5, 1),
 (23, 2, 'Điện Thoại iPhone XS 64GB - Hàng Nhập Khẩu Chính Hãng\r\n', 'Điện Thoại iPhone XS cuối cùng cũng chính thức giới thiệu những chiếc iPhone X thế hệ mới với tên gọi XS. XS được đọc là \"ten ess\", từ s được đặt trong một ô vuông. iPhone XS cũng giống như truyền thống của Apple khi hầu như không thay đổi thiết kế bên ngoài và chỉ nâng cấp nhiều về phần cứng bên trong. iPhone XS được trang bị kính bảo vệ mới cho màn hình được Apple nói rằng đó là loại kính bền nhất trên smartphone hiện nay. Máy đạt chuẩn chống nước bụi IP68.\r\niPhone XS với thiết kế bên ngoài giống với iPhone X, không trang bị nút Home cứng, viền kim loại sang trọng và đặc biệt là cụm camera sau được trang bị theo chiều dọc tạo điểm nhấn cho chiếc điện thoại.\r\nSở hữu màn hình OLED 5.8 inch với độ phân giải (2436 x 1125) pixels với 3.3 triệu điểm ảnh, mật độ điểm ảnh 463ppi pixel mang đến khả năng hiển thị màu sắc ấn tượng, sắc nét cho bạn trải nghiệm ở mọi góc nhìn. Màn hình lược bỏ nút Home cứng truyền thống tạo cảm giác lạ mắt và tạo nhiều không gian hơn cho người dùng.\r\nFace ID là công nghệ được phát triển dựa trên Touch ID, sử dụng một loạt cảm biến phía trước, máy ảnh TrueDepth và máy chiếu chấm hồng ngoại để tạo ra bản đồ 3D cực kỳ chi tiết dành cho khuôn mặt của bạn. Máy chiếu chấm hồng ngoại tạo ra 30.000 điểm vô hình trên khuôn mặt mỗi khi bạn nhìn vào điện thoại để đảm bảo độ chính xác khi quét. Công nghệ này sẽ giúp bạn bảo mật thông tin một cách tốt hơn.\r\n', 25000000, 28, 0, 29, 100, 5, 1),
@@ -648,7 +656,7 @@ INSERT INTO `product` (`id`, `idCatalog`, `name`, `description`, `price`, `disco
 (33, 4, 'ĐIỆN THOẠI XIAOMI REDMI NOTE 9S - HÀNG CHÍNH HÃNG\r\n', 'Bộ xử lý tám nhân hiệu suất cao, xung nhịp lên đến 2.3 GHz. Công cụ AI thế hệ thứ năm với khả năng tính toán vượt trội.\r\n36%: hiệu năng CPU mạnh hơn so với Snapdragon 712\r\n18%: hiệu năng GPU mạnh hơn so với Snapdragon 712\r\n', 5500000, 13, 0, 4, 99, 5, 1),
 (34, 4, 'Điện thoại Xiaomi Redmi 8 64GB Ram 4GB - Hàng chính hãng\r\n	', 'Bên cạnh thiết kế, Xiaomi đã sử dụng tấm nền IPS LCD cho màn hình Xiaomi Redmi 8 để mang đến cho smartphone không gian hiển thị sống động với màu sắc chính xác. Độ phân giải HD+ (720 x 1520 pixels) cho hình ảnh sắc nét, chân thực. Bạn sẽ có những giây phút tận hưởng những bộ phim hay, chơi game, giải trí hay làm việc tuyệt vời với Xiaomi Redmi 8. Ngoài ra, màn hình Redmi 8 còn có khả năng lọc ánh sáng xanh giúp bảo vệ đôi mắt người dùng khi sử dụng smartphone trong thời gian dài.\r\nMặc dù là một smartphone giá rẻ nhưng Xiaomi Redmi 8 vẫn được trang bị hệ thống camera kép với camera chính cảm biến 12MP và camera phụ 2MP giúp xóa phông chuyên nghiệp. Camera chính còn có khẩu độ f/1.8 hỗ trợ lấy nét theo pha Dual Pixel nên sẽ giúp mang đến những tấm ảnh chụp với chất lượng tuyệt vời ngay cả trong điều kiện thiếu sáng, giúp bạn chụp ảnh ban đêm xinh đẹp, rõ nét. Hỗ trợ quay video với chất lượng Full HD 1080p nên bạn có thể ghi lại mọi khoảnh khắc đáng nhớ, sẵn sàng chia sẻ với mọi người.\r\nĐiểm cộng tuyệt vời nhất của Xiaomi Redmi 8 chính là viên pin với dung lượng cực “khủng” 5000mAh. Viên pin này của smartphone sẽ cung cấp 17 giờ phát video liên tục, 28 giờ đàm thoại liên tục hay nghe nhạc liên tục tới 180 giờ - những con số vô cùng ấn tượng. Đối với nhu cầu sử dụng thông thường thì chỉ cần một lần sạc đầy, bạn đã có thể sử dụng smartphone đến 3 ngày.\r\n', 3600000, 22, 0, 8, 83, 3.5, 2),
 (35, 29, 'Laptop Lenovo Ideapad 330-14IGM 81D00060VN (Celeron N4100/ 4GB DDR4 2400MHz/ SSD 256GB/ 14HD/ Win10) - Hàng Chính Hãng', 'Thiết kế gọn nhẹ di động\r\n\r\nKhi bạn di chuyển cho công việc, Laptop Lenovo Ideapad 330-14IGM 81D00060VN rất lý tưởng để bạn có thể mang theo để học tập, làm việc cũng như giải trí với trọng lượng gọn nhẹ cho một chiếc laptop kích thước 14-inch. Thiết kế viền màn hình siêu mỏng cũng giúp giảm thiểu đáng kể trọng lượng và tăng diện tích hiển thị hình ảnh trên khung máy đem lại một trải nghiệm tốt hơn. Và với sự lựa chọn màu sắc trẻ trung kết thúc trong một thiết kế bóng bẩy, chiếc máy tính xách tay này chắc chắn sẽ giúp bạn gây ấn tượng.\r\n\r\nHiệu năng xử lý mức tạm được\r\n\r\nLaptop Lenovo Ideapad 330-14IGM 81D00060VN (Celeron N4100/ 4GB DDR4 2400Mhz/ 256GB SSD/ 14HD/ Win10) với bộ vi xử lý Intel Celeron N4100 1.10 GHz up to 240 GHz, 4MB, RAM 4GB giúp xử lý tốt các ứng dụng văn phòng, bên cạnh đó máy cũng đáp ứng nhu cầu học tập giải trí cơ bản của người dùng.\r\n\r\nThời lượng pin lớn, sử dụng thoải mái Lenovo Ideapad 330-14IGM có thời lượng pin lên đến 8 tiếng, con số rất ấn tượng cho một chiếc laptop thiết kế theo phong cách mỏng nhẹ. Chiếc máy đủ để bạn sử dụng trọn một ngày làm việc văn phòng mà không cần phải sạc điện. Tha hồ học tập, nghiên cứu hay thậm chí là giải trí với những bộ phim dài tập bất cứ đâu mà không phải lo hết pin.\r\n\r\nGiá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Tuy nhiên tuỳ vào từng loại sản phẩm hoặc phương thức, địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh,\r\n\r\nGiá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Tuy nhiên tuỳ vào từng loại sản phẩm hoặc phương thức, địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, ...', 7000000, 15, 0, 0, 100, 0, 0),
-(36, 29, 'Laptop Dell Inspiron 3583 . Intel Core i3 8145U- TOUCH (15.6 inch) - Hàng Nhập Khẩu', 'Hệ điều hành : Windows 10 Home SL\r\nBộ vi xử lý : Intel Core i5-8265U (1.60GHz Up to 3.90 GHz, 4Cores, 8Threads, 6MB Cache, FSB 4GT/s)\r\nMàn hình : 15.6 inch HD (1366 x 768) Anti-Glare LED, Touch Screen\r\nĐồ họa ; Intel UHD Graphics 620\r\nBộ nhớ Ram : 1 x 8GB DDR4 2666MHz,\r\nỔ đĩa cứng ; 128GB Solid State Drive - Siêu NhanhDell Inspiron 3583 sẽ là 1 sự lựa chọn tốt cho bạn với 1 laptop 15 inchs ở tầm giá này. Nó được thiết kế đơn giản và có giá không quá cao và nhiều tính năng rất đa dạng cho tầm giá này. Nó rất phù hợp cho những người làm việc văn phòng và có thể sử dụng các phần mềm đồ họa ở mức cơ bản.     NGOẠI HÌNH, KÍCH THƯỚC VÀ TRỌNG LƯỢNG  Chiếc laptop Inspiron 3583 được thiết kế với ngoại hình rất đơn sơ có 4 màu(đen, bạc, trắng, xanh). Tất cả các bộ phận của chiếc Laptop này được làm hoàn toàn từ nhựa rất đảm bảo cho việc cầm nấm nó. Inspiron có kích thước: Chiều cao: 22,7 mm (0,89 “), Chiều rộng: 380,0 mm (14,96),Độ sâu: 258,0 mm (10,16) và trọng lượng của nó chỉ 2,20 kg (4,83 lbs). Với chiếc Laptop 15inchs thì dell Inspiron 15 nhỏ gọn và nhẹ hơn rất nhiều so với HP Notebook 15 và Acer Aspire E 15. Vì thế Dell Inspiron 15 sẽ dễ dàng cho bạn xách đi bất cứ đâu.  ', 10500000, 0, 0, 0, 100, 0, 0),
+(36, 29, 'Laptop Dell Inspiron 3583 . Intel Core i3 8145U- TOUCH (15.6 inch) - Hàng Nhập Khẩu', 'Hệ điều hành : Windows 10 Home SL\r\nBộ vi xử lý : Intel Core i5-8265U (1.60GHz Up to 3.90 GHz, 4Cores, 8Threads, 6MB Cache, FSB 4GT/s)\r\nMàn hình : 15.6 inch HD (1366 x 768) Anti-Glare LED, Touch Screen\r\nĐồ họa ; Intel UHD Graphics 620\r\nBộ nhớ Ram : 1 x 8GB DDR4 2666MHz,\r\nỔ đĩa cứng ; 128GB Solid State Drive - Siêu NhanhDell Inspiron 3583 sẽ là 1 sự lựa chọn tốt cho bạn với 1 laptop 15 inchs ở tầm giá này. Nó được thiết kế đơn giản và có giá không quá cao và nhiều tính năng rất đa dạng cho tầm giá này. Nó rất phù hợp cho những người làm việc văn phòng và có thể sử dụng các phần mềm đồ họa ở mức cơ bản.     NGOẠI HÌNH, KÍCH THƯỚC VÀ TRỌNG LƯỢNG  Chiếc laptop Inspiron 3583 được thiết kế với ngoại hình rất đơn sơ có 4 màu(đen, bạc, trắng, xanh). Tất cả các bộ phận của chiếc Laptop này được làm hoàn toàn từ nhựa rất đảm bảo cho việc cầm nấm nó. Inspiron có kích thước: Chiều cao: 22,7 mm (0,89 “), Chiều rộng: 380,0 mm (14,96),Độ sâu: 258,0 mm (10,16) và trọng lượng của nó chỉ 2,20 kg (4,83 lbs). Với chiếc Laptop 15inchs thì dell Inspiron 15 nhỏ gọn và nhẹ hơn rất nhiều so với HP Notebook 15 và Acer Aspire E 15. Vì thế Dell Inspiron 15 sẽ dễ dàng cho bạn xách đi bất cứ đâu.  ', 10500000, 0, 0, 0, 98, 4, 1),
 (37, 29, 'Laptop Asus VivoBook S14 S433EA-EB100T (Core i5-1135G7/ 8GB DDR4 3200MHz/ 512GB SSD M.2 PCIE G3X2/ 14 FHD IPS/ Win10) - Hàng Chính Hãng', 'ASUS VivoBook S433EA-EB100T, sự lựa chọn hàng đầu của giới trẻ, giúp mang đến một vẻ ngoài siêu nổi bật và tràn đầy cá tính. ASUS VivoBook S14 mỏng nhẹ có điểm nhấn thiết kế là viền cắt kim cương và có bốn màu sắc khác biệt, cho phép bạn thoải mái lựa chọn để thể hiện cá tính của mình. Cá tính của bạn còn được thể hiện rõ nét hơn khi mở máy vì phím Enter vàng nổi bật sẽ xuất hiện tạo điểm nhấn so với bàn phím truyền thống. VivoBook S14 sẽ giúp thể hiện cá tính của bạn, cả bên trong và bên ngoài.', 17800000, 0, 0, 0, 100, 0, 0),
 (38, 29, 'Laptop MSI Modern 14 A10M-1071VN (Core i7-10510U/ 8GB DDR4 2666MHz/ 256GB PCIe NVMe/ 14 FHD IPS/ Win10) - Hàng Chính Hãng', 'CPU: Intel Core i7-10510U 1.8GHz up to 4.9GHz 8MB\r\nRAM: 8GB DDR4 2666MHz\r\nỔ cứng: 256GB PCIe NVMe M.2 SSD\r\nCard đồ họa: Intel UHD Graphics\r\nMàn hình: 14\" FHD (1920 x 1080) IPS-Level, 60Hz, 72% NTSC, Thin Bezel, 100% sRGB\r\nHệ điều hành: Windows 10 Home\r\nPin: 4 Cell 50WHr', 20000000, 0, 0, 0, 100, 0, 0),
 (39, 30, 'MXK32 / MXK62 - Macbook Pro 13 inch 2020 - i5 1.4/8GB/256Gb - 2 thunderbolt - 99%', 'Bên cạnh đó, phím ESC đã được tách riêng ra khỏi dải Touchbar so với những thế hệ tiền nhiệm. Rất nhiều người dùng đã phản ánh rằng, phím ESC trên dải Touchbar hoạt động không ổn định. Nay trên chiếc Macbook Pro 13 inch 2020, Apple đã lắng nghe người dùng hơn và quyết định chuyển vị trí ESC ra bên cạnh dải Touch Bar. Một cải tiến nho nhỏ nữa trên bàn phím của Macbook Pro 13 inch 2020 năm nay đến từ cụm phím điều hướng. Trên những phiên bản tiền nhiệm, cụm phím điều hướng được xếp quá sát nhau, khiến người dùng cảm thấy khó khăn khi muốn sử dụng. Nay trên phiên bản Macbook Pro 13 inch 2020, cụm phím điều hướng này đã được thiết kế lại với hình dáng chữ T đảo ngược, đem lại trải nghiệm nhập liệu tốt hơn đáng kể cho người dùng.', 30500000, 0, 0, 0, 100, 0, 0),
@@ -659,9 +667,9 @@ INSERT INTO `product` (`id`, `idCatalog`, `name`, `description`, `price`, `disco
 (44, 31, 'Laptop ASUS Gaming ROG Zephyrus G14 GA401I', 'Laptop ASUS Gaming ROG Zephyrus GA401I không giống với thiết kế của những loại laptop gaming khác với vẻ ngoài hầm hố và đường net cứng cáp, mạnh mẽ, và màu sắc chủ đạo thường là đen. Chiếc laptop này thì lại mang sắc trắng rất trang nhã và thanh lịch, giúp bạn có thể sử dụng với nhiều mục đích khác nhau mà không cần lo lắng vẻ ngoài chiếc laptop của mình không phù hợp với hoàn cảnh sử dụng.', 25000000, 0, 0, 0, 100, 0, 0),
 (45, 31, 'Laptop ASUS Gaming ROG Strix G531GT-HN554T', 'Chiếc laptop ASUS ROG Strix G G531GT mang hình dáng hầm hố, mạnh mẽ và ấn tượng ở mọi góc cạnh. Toàn thân chiếc máy được phủ lớp vỏ nguyên khối màu đen cứng cáp và bền bỉ. Mặt lưng máy khắc rõ nét logo Republic of Gamers trứ danh, khẳng định thương hiệu laptop gaming thực thụ. Đặc biệt, hệ thống đèn Aura Sync trải quanh viền máy sẽ góp phần tăng thêm độ ấn tượng của chiếc laptop đối với game thủ.', 23000000, 0, 0, 0, 100, 0, 0),
 (46, 31, 'Laptop ASUS Gaming ROG Zephyrus GA502IU-AL007T', 'Asus là một trong những thương hiệu đang dẫn đầu phân khúc laptop gaming đang bán trên thị trường. Các dòng laptop gaming của Asus có hiệu năng cực cao tạo sự vượt trội và đột phá khi chơi game. Một trong số những sản phẩm nổi bật của hãng đó là laptop ASUS Gaming ROG Zephyrus G15 GA502IU-AL007T là sản phẩm mang đến hiệu năng cực kỳ mượt mà và mạnh mẽ dành cho bạn.', 27500000, 0, 0, 0, 100, 0, 0),
-(47, 32, 'Laptop ASUS ZenBook Duo UX481FL-BM049T (i7-10510U) - 14inch, bảo mật IR camera đăng nhập bằng khuôn mặt với hệ thống camera 3D hồng ngoại', 'br {mso-data-placement: same-cell;}• ScreenPad Plus màn hình thứ hai kích thước 12.6” hỗ trợ cảm ứng kết hợp với bàn phím có đèn Led\r\n• Màn hình chính kích thước 14 inch FHD viền với 4 viền siêu mỏng NanoEdge\r\n• Vi xử lý: Cấu hình mạnh mẽ với vi xử lí Intel Core i7-10510U thế hệ thứ 10\r\n• Đồ họa: NVIDIA GeForce MX250 hiệu năng đồ họa mượt mà\r\n• Ổ lưu trữ : 1TB SSD PCI-Express 3.0 x2 khả năng lưu trữ mạnh mẽ và tốc độ\r\n• Ram: dung lượng 16GB DDR3\r\n• Kết nối: WI-FI 6 tốc độ cao, Bluetooth 5.0 cho trải nghiệm không dây tốt\r\n• Bảo mật: IR camera đăng nhập bằng khuôn mặt với hệ thống camera 3D hồng ngoại', 38000000, 0, 0, 0, 100, 0, 0),
+(47, 32, 'Laptop ASUS ZenBook Duo UX481FL-BM049T (i7-10510U) - 14inch, bảo mật IR camera đăng nhập bằng khuôn mặt với hệ thống camera 3D hồng ngoại', 'br {mso-data-placement: same-cell;}• ScreenPad Plus màn hình thứ hai kích thước 12.6” hỗ trợ cảm ứng kết hợp với bàn phím có đèn Led\r\n• Màn hình chính kích thước 14 inch FHD viền với 4 viền siêu mỏng NanoEdge\r\n• Vi xử lý: Cấu hình mạnh mẽ với vi xử lí Intel Core i7-10510U thế hệ thứ 10\r\n• Đồ họa: NVIDIA GeForce MX250 hiệu năng đồ họa mượt mà\r\n• Ổ lưu trữ : 1TB SSD PCI-Express 3.0 x2 khả năng lưu trữ mạnh mẽ và tốc độ\r\n• Ram: dung lượng 16GB DDR3\r\n• Kết nối: WI-FI 6 tốc độ cao, Bluetooth 5.0 cho trải nghiệm không dây tốt\r\n• Bảo mật: IR camera đăng nhập bằng khuôn mặt với hệ thống camera 3D hồng ngoại', 38000000, 0, 0, 0, 99, 1, 1),
 (48, 32, 'Laptop HP Pavilion x360 14-dw0061TU 19D52PA (Gold) i3-1005G1| 4GB| 512GB| OB| 14\"FHD Touch| Win 10 - Hàng chính hãng new 100%', '1x USB 3.1 Gen 1 Type-C (USB Type-C port with HP Sleep and Charge)\r\n1x HDMI\r\nFinger PrintỔ quangNoneAudioAudio by B&O, Dual Speakers, HP Audio Boost 1.0Đọc thẻ nhớ1 multi-format SD media card readerChuẩn LANNoneChuẩn WIFI802.11 axBluetoothv5.0WebcamHP Wide Vision HD CameraHệ điều hànhWindows 10 Home + Office Home & StudentPin3 Cell 43WHrTrọng lượng1.61 kgMàu sắcVàngKích thước32.4 x 22.1 x 1.87 cm', 14000000, 0, 0, 0, 100, 0, 0),
-(49, 32, 'Laptop 2 in 1 Asus TF100 màn cảm ứng tháo rời được', 'Độ phân giải: Full HD\r\n\r\nKích thước: 10\" (16:9)\r\n\r\nHệ điều hành: Win 8/10\r\n\r\nRAM: 2GB\r\n\r\nCPU: Intel\r\n\r\nBộ nhớ trong: 64GB\r\n\r\nKết nối mạng: Wifi', 2500000, 0, 0, 0, 100, 4, 0),
+(49, 32, 'Laptop 2 in 1 Asus TF100 màn cảm ứng tháo rời được', 'Độ phân giải: Full HD\r\n\r\nKích thước: 10\" (16:9)\r\n\r\nHệ điều hành: Win 8/10\r\n\r\nRAM: 2GB\r\n\r\nCPU: Intel\r\n\r\nBộ nhớ trong: 64GB\r\n\r\nKết nối mạng: Wifi', 2500000, 0, 0, 0, 100, 0, 0),
 (50, 32, 'Laptop 2 trong 1 kiêm máy tính bảng Dell Venue 11pro 7140, Core M-5Y71, 4gb Ram, 128gb SSD, 11inch Full HD', 'Thiết kế tinh tế, gon nhẹ\r\nTính năng vượt trội linh hoạt di chuyển\r\ncấu hình mạnh mẽ với cpu thế hệ 5\r\nCPU core iM-5Y71 1.20GHz turbo lên tới 2.90GHz 4M Cache 2 nhân 4 luồng\r\nBộ nhớ ram 4gb DDR3 buss 1600GHz\r\nỔ cứng SSD 128GB sata 3 6gb/s\r\nMàn hình cảm ứng đa điểm Full HD kích thước 11 inch\r\nkết nối không dây WIFI 802.11a/b/g/n, Bluetooth 4.0, NFC\r\nCamera kép trước phân giải 2.0MP và sau độ phân giải lên dến 8.0MP\r\nPin dung lượng cao cho thời gian hoạt động dài\r\nBàn phím tích hợp pin cho thời lượng hoạt động lên tới hơn 6 giờ( lựa chọn gói cấu hình khi mua)\r\nBàn phím dạng module dễ dàng tháo rời trở thành máy tính hảng\r\nTích hợp khe cắm thẻ nhớ micro SD\r\nbộ sạc tiêu chuẩn kèm theo', 5000000, 0, 0, 0, 100, 0, 0),
 (51, 5, 'LG V50 ThinQ 5G (6GB|128GB) Hàn Quốc (Likenew)', 'LG V50 ThinQ là điện thoại cao cấp vừa được ra mắt trong năm 2019. Đây là điện thoại 5G đầu tiên của LG, sở hữu nhiều công nghệ đột phá, nổi bật nhất hiện nay. Với nhiều tính năng ưu việt, LG V50 ThinQ 5G đã nhanh chóng có được lượng fan nhất định.', 7000000, 0, 0, 0, 100, 0, 0),
 (52, 5, 'LG G8X ThinQ (6GB|128GB) (Like New)', 'LG G8x ThinQ là một phiên bản lớn hơn của chiếc LG G8 thông thường. Mặc dù vẫn nằm trong gia đình G8, nhưng máy lại mang đến khá nhiều điểm khác biệt đáng kể về ngoại hình. Tuy vậy chất flagship vẫn được giữ lại với vật liệu nhôm nguyên khối làm khung máy và 2 mặt kính cường lưc trước và sau.\r\n\r\nỞ mặt lưng chúng ta vẫn thấy được một số nét rất riêng của dòng G8 đó là cụm camera kép đặt ngang, tiếp tới là đèn flash kép 2 tông màu. Phía dưới sẽ in tên máy là LG G8x ThinQ. LG sử dụng kính bóng cho máy tạo nên một vẻ sang trọng, hiện đại, tuy nhiên kính bóng vẫn sẽ gặp phải 1 điểm yếu là khá dễ bám bụi bẩn, vân tay.', 6000000, 0, 0, 0, 100, 0, 0),
@@ -675,10 +683,10 @@ INSERT INTO `product` (`id`, `idCatalog`, `name`, `description`, `price`, `disco
 (60, 7, 'Điện thoại Vivo X50 Pro\r\n', 'Vivo X50 Pro mang trên mình cụm 4 camera với camera chính 48 MP kết hợp với ống kính góc cực rộng 8 MP, camera độ sâu 13 MP và camera tele 8 MP được thiết kế thành cụm hình chữ nhật to bản nằm ở góc trái mặt lưng của máy.', 20000000, 0, 0, 0, 100, 0, 0),
 (61, 7, 'Điện thoại Vivo X50\r\n', 'Thiết kế bắt xu thế với màn hình Infinity-O, nâng cao khả năng hiển thị với độ phân giải Full HD+, cho không gian sử dụng thoải mái, trải nghiệm hình ảnh sống động với các bộ phim, video ca nhạc, dễ dàng đọc sách báo hằng ngày.', 12000000, 0, 0, 0, 100, 0, 0),
 (62, 7, 'Điện thoại Vivo V19', 'Vivo V19 sở hữu một thiết kế hiện đại bắt kịp xu hướng smartphone mới hiện nay. Mặt trước là một màn hình tràn viền chuẩn mực với bảo mật vân tay đặt dưới màn hình.', 8500000, 0, 0, 0, 100, 0, 0),
-(63, 8, 'Điện thoại Realme 7 Pro', 'Realme 7 Pro sở hữu cụm 4 camera được thiết kế nằm dọc ở sau mặt lưng với cảm biến chính 64 MP được tích hợp các tính năng đa dụng như camera xóa phông, chụp toàn cảnh (Panorama), HDR,... mang đến độ sắc nét, chất lượng cho mỗi bức ảnh.', 9000000, 0, 0, 0, 100, 0, 0),
+(63, 8, 'Điện thoại Realme 7 Pro', 'Realme 7 Pro sở hữu cụm 4 camera được thiết kế nằm dọc ở sau mặt lưng với cảm biến chính 64 MP được tích hợp các tính năng đa dụng như camera xóa phông, chụp toàn cảnh (Panorama), HDR,... mang đến độ sắc nét, chất lượng cho mỗi bức ảnh.', 9000000, 0, 0, 0, 98, 4, 1),
 (64, 8, 'Điện thoại Realme 6 Pro', 'Ấn tượng đầu tiên của Realme 6 Pro chính là hệ thống 6 camera, gồm cụm 4 camera sau và 2 camera trước đục lỗ hình viên thuốc, tương tự như trên các mẫu flagship cao cấp hiện nay.', 8000000, 0, 0, 0, 100, 0, 0),
-(65, 8, 'Điện thoại Realme 7', 'Mặt sau của máy lấy cảm hứng từ không gian gương trong tự nhiên, Realme 7 có thiết kế gương rực rỡ. Sự chia cắt táo bạo mang đến một tác động thị giác mới với hiệu ứng ánh sáng tuyệt đẹp, vẻ đẹp tự nhiên cân bằng được bộc lộ.\r\n\r\n', 8000000, 0, 0, 0, 100, 0, 0),
-(66, 8, 'Điện thoại Realme 7i\r\n', 'Realme 7i cho cảm giác cầm khá thoải mái, nhẹ tênh với 4 cạnh viền bo cong, mặt lưng làm từ nhựa cho trọng lượng máy nhẹ hơn, trong khi mặt trước được bảo vệ bằng kính cường lực Gorilla Glass 3 ngăn ngừa tối đa các tổn hại ở màn hình khi làm rơi rớt, va chạm.\r\n\r\n', 7500000, 0, 0, 0, 100, 0, 0),
+(65, 8, 'Điện thoại Realme 7', 'Mặt sau của máy lấy cảm hứng từ không gian gương trong tự nhiên, Realme 7 có thiết kế gương rực rỡ. Sự chia cắt táo bạo mang đến một tác động thị giác mới với hiệu ứng ánh sáng tuyệt đẹp, vẻ đẹp tự nhiên cân bằng được bộc lộ.\r\n\r\n', 8000000, 0, 0, 0, 98, 2, 1),
+(66, 8, 'Điện thoại Realme 7i\r\n', 'Realme 7i cho cảm giác cầm khá thoải mái, nhẹ tênh với 4 cạnh viền bo cong, mặt lưng làm từ nhựa cho trọng lượng máy nhẹ hơn, trong khi mặt trước được bảo vệ bằng kính cường lực Gorilla Glass 3 ngăn ngừa tối đa các tổn hại ở màn hình khi làm rơi rớt, va chạm.\r\n\r\n', 7500000, 0, 0, 0, 97, 3, 1),
 (67, 9, 'Điện thoại Huawei Nova 7i (Nền tảng Huawei Mobile Service)', 'Điện thoại tầm trung Huawei Nova 7i được trang bị màn hình kích thước 6.4 inch độ phân giải Full HD+ với điểm nhấn chính là màn hình khoét lỗ nằm bên trái để đặt camera trước.\r\n\r\n', 6000000, 0, 0, 0, 98, 5, 1),
 (68, 9, 'Điện thoại Huawei Y6p (Nền tảng Huawei Mobile Service)\r\n', 'Mặt lưng của Huawei Y6p được thiết kế ấn tượng bằng chất liệu nhựa giả kính cao cấp với họa tiết các đường ánh sáng cong mượt mà thay đổi dưới nhiều góc độ khác nhau.\r\n\r\n', 3500000, 0, 0, 0, 98, 5, 1),
 (69, 9, 'Huawei P30 Pro', 'P30 Pro sở hữu bộ khung vỏ kim loại có độ hoàn thiện tốt, được tô điểm bằng hai mặt kính trước - sau làm nên diện mạo bóng bẩy nịnh mắt. Thay vì sử dụng “tai thỏ” như năm ngoái, Huawei đem tới cho P30 Pro thiết kế màn hình giọt nước toát nên vẻ trẻ trung và thời trang.\r\n\r\n', 13000000, 0, 0, 0, 100, 0, 0),
@@ -688,7 +696,7 @@ INSERT INTO `product` (`id`, `idCatalog`, `name`, `description`, `price`, `disco
 (73, 10, 'Điện thoại Vsmart Aris (6GB/64GB)', 'Điểm nổi bật khi nhìn trên Vsmart Aris đầu tiên phải kể đến là bộ 4 camera chất lượng thiết kế dạng hình vuông ở giữa mặt lưng trông rất bắt mắt có phần khác biệt so với các thế hệ trước.\r\n\r\n', 6000000, 0, 0, 0, 100, 0, 0),
 (74, 10, 'Điện thoại Vsmart Live 4 6GB', 'Vsmart vẫn giữ lại kiểu dáng như các sản phẩm trước, mặt lưng của máy được hoàn thiện bằng chất liệu nhựa nhám mờ, ở giữa nổi bật là logo màu xám trắng dễ dàng nhận biết, thiết kế này thì phù hợp với mọi lứa tuổi.\r\n\r\nMặt trước của máy được bảo vệ lớp kính cường lực Corning Gorilla Glass 3 có độ bền nhất định, ít trầy xước và chịu được lực ấn mạnh tay hay va chạm nhẹ. Smartphone này còn được trang bị cảm biến vân tay ở mặt lưng giúp bạn mở khóa một cách nhanh chóng chỉ với một chạm duy nhất.', 50000000, 0, 0, 0, 100, 0, 0),
 (75, 11, 'Bphone B86S\r\n', 'Tối ngày 10/05, sau nhiều lần dời lịch, Bphone B86 cũng được CEO Nguyễn Tử Quảng ra mắt người dùng cùng với 3 phiên bản khác là B40, B60 và B86s. Có mức giá từ 5.490.000đ\r\n\r\n', 10000000, 0, 0, 0, 100, 0, 0),
-(76, 11, 'Bphone B86\r\n', 'Tối ngày 10/05, sau nhiều lần dời lịch, Bphone B86 cũng được CEO Nguyễn Tử Quảng ra mắt người dùng cùng với 3 phiên bản khác là B40, B60 và B86s. Có mức giá từ 5.490.000đ\r\n\r\n', 9000000, 0, 0, 0, 100, 0, 0),
+(76, 11, 'Bphone B86\r\n', 'Tối ngày 10/05, sau nhiều lần dời lịch, Bphone B86 cũng được CEO Nguyễn Tử Quảng ra mắt người dùng cùng với 3 phiên bản khác là B40, B60 và B86s. Có mức giá từ 5.490.000đ\r\n\r\n', 9000000, 0, 0, 0, 90, 0, 0),
 (77, 11, 'Điện thoại Bkav C85', 'Theo đại diện của Bkav, C85 sẽ tận dụng những ưu điểm của điện thoại phổ thông, như kiểu dáng nhỏ gọn, dễ sử dụng, pin trâu, có thể dùng cả tuần không cần sạc. Máy truy cập được những ứng dụng phổ biến như Facebook, YouTube, Google... Bên cạnh đó, sản phẩm còn tích hợp công nghệ ra lệnh bằng giọng nói.\r\n\r\n', 500000, 0, 0, 0, 100, 0, 0),
 (78, 11, 'Điện thoại Bphone 3\r\n', 'Nếu như với 2 chiếc Bphone đời đầu nhiều người còn đánh giá đây chỉ là những chiếc máy để Bkav để \"quảng bá thương hiệu\" chứ chưa thực sự đáng sở hữu thì với Bphone 3 Bkav đã khiến nhiều người Việt thực sự \"tự hào\".\r\n', 7000000, 0, 0, 0, 100, 0, 0);
 
@@ -736,53 +744,13 @@ INSERT INTO `rate` (`id`, `idUser`, `idProduct`, `ratePoint`, `comment`, `create
 (48, 41, 29, 5, '', '2020-11-26 16:12:04.000000', NULL),
 (49, 41, 34, 5, '', '2020-11-26 16:12:06.000000', NULL),
 (50, 41, 67, 5, '', '2020-11-26 16:12:08.000000', NULL),
-(51, 41, 68, 5, '', '2020-11-26 16:12:09.000000', NULL);
-
---
--- Triggers `rate`
---
-DELIMITER $$
-CREATE TRIGGER `before_insert_rate` BEFORE INSERT ON `rate` FOR EACH ROW BEGIN
-SET @count_ratepoint =(SELECT COUNT(*) FROM rate WHERE rate.idProduct = 		NEW.idProduct AND rate.idUser = NEW.idUser);
-IF(@count_ratepoint=0) 
-	THEN SET NEW.createdAt = NOW();
-END IF;
-END
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `before_update_rate` BEFORE UPDATE ON `rate` FOR EACH ROW BEGIN
-SET NEW.modifiedAt = NOW();
-END
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `delete_rate` AFTER DELETE ON `rate` FOR EACH ROW BEGIN
-SET @sum_ratepoint = (SELECT SUM(ratePoint) FROM rate WHERE rate.idProduct = 	old.idProduct);
-SET @count_ratepoint = (SELECT COUNT(*) FROM rate WHERE rate.idProduct = 		old.idProduct);
-SET @everage = ROUND(@sum_ratepoint/ @count_ratepoint, 1);
-UPDATE product SET product.rate = @everage, product.rateQty = @count_ratepoint WHERE product.id = old.idProduct;
-END
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `insert_rate` AFTER INSERT ON `rate` FOR EACH ROW BEGIN
-SET @sum_ratepoint = (SELECT SUM(ratePoint) FROM rate WHERE rate.idProduct = 	NEW.idProduct);
-SET @count_ratepoint = (SELECT COUNT(*) FROM rate WHERE rate.idProduct = 		NEW.idProduct);
-SET @everage = ROUND(@sum_ratepoint/ @count_ratepoint, 1);
-UPDATE product SET product.rate = @everage, product.rateQty = @count_ratepoint WHERE product.id = NEW.idProduct;
-END
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `update_rate` AFTER UPDATE ON `rate` FOR EACH ROW BEGIN
-SET @sum_ratepoint = (SELECT SUM(ratePoint) FROM rate WHERE rate.idProduct = 	NEW.idProduct);
-SET @count_ratepoint = (SELECT COUNT(*) FROM rate WHERE rate.idProduct = 		NEW.idProduct);
-SET @everage = ROUND(@sum_ratepoint/ @count_ratepoint, 1);
-UPDATE product SET rate = @everage WHERE product.id = NEW.idProduct;
-END
-$$
-DELIMITER ;
+(51, 41, 68, 5, '', '2020-11-26 16:12:09.000000', NULL),
+(52, 41, 36, 4, '', '2020-12-01 21:21:58.000000', NULL),
+(53, 41, 47, 1, 'Sản phẩm quá tệ', '2020-12-01 21:43:22.000000', NULL),
+(54, 41, 14, 3, 'Cũng tàm tạm', '2020-12-01 22:07:37.000000', '2020-12-01 22:09:41.000000'),
+(57, 41, 66, 3, '', '2020-12-01 22:32:54.492000', NULL),
+(58, 41, 63, 4, 'Tuyệt vời. Nhưng còn nhiều lỗi. Khi nào fix xong thig t sửa lại. Oke?', '2020-12-01 22:40:57.703000', NULL),
+(59, 41, 65, 2, 'Máy giật lag', '2020-12-01 22:41:09.839000', NULL);
 
 -- --------------------------------------------------------
 
@@ -864,53 +832,59 @@ CREATE TABLE `transact` (
   `qty` int(11) NOT NULL DEFAULT 0,
   `amount` int(15) NOT NULL DEFAULT 0,
   `message` text DEFAULT NULL,
-  `created` bigint(18) DEFAULT NULL
+  `created` timestamp NULL DEFAULT NULL,
+  `modified` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `transact`
 --
 
-INSERT INTO `transact` (`id`, `status`, `id_user`, `user_name`, `user_phone`, `province`, `district`, `ward`, `address`, `qty`, `amount`, `message`, `created`) VALUES
-(87, 4, 41, 'Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 2, 7380000, NULL, 1599580422360),
-(88, 4, 41, 'Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 3, 11070000, NULL, 1599580646601),
-(89, -1, 41, 'Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 1, 2790000, NULL, 1599581776324),
-(90, 4, 42, 'Thắng Nguyễn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 2, 12040000, NULL, 1599963440860),
-(92, -1, 42, 'Thắng Nguyễn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 3, 63190000, NULL, 1599969172980),
-(93, 4, 42, 'Thắng Nguyễn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 8, 38340000, NULL, 1599969330661),
-(94, 4, 42, 'Thắng Nguyễn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 2, 43390000, NULL, 1599977376282),
-(95, 1, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 1, 15010000, NULL, 1600016680695),
-(96, 1, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 5, 144500000, NULL, 1600088354133),
-(97, 4, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 32, 105732000, NULL, 1600091191032),
-(98, 2, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 3, 14580000, NULL, 1600093724171),
-(99, 3, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 13, 199133000, NULL, 1600096122047),
-(100, 1, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 1, 9990000, NULL, 1600097380232),
-(101, 4, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 3, 30000000, NULL, 1600761045588),
-(102, 1, 43, 'Thắng pro', '0967244081', 'Tỉnh Bình Định', 'Huyện Tuy Phước', 'Xã Phước Nghĩa', 'cung nam', 10, 123580000, NULL, 1600167057865),
-(103, 1, 43, 'Thắng pro', '0967244081', 'Tỉnh Bình Định', 'Huyện Tuy Phước', 'Xã Phước Nghĩa', 'cung nam', 1, 28900000, NULL, 1600188478721),
-(104, 0, 43, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL),
-(105, -1, 44, 'Hồ Phạm Ngọc Thạch', '0778889076', 'Tỉnh Tây Ninh', 'Huyện Hòa Thành', 'Xã Long Thành Nam', 'Chờ người nơi ấy', 2, 25960000, NULL, 1600314417954),
-(106, 1, 44, 'Hồ Phạm Ngọc Thạch', '0778889076', 'Tỉnh Tây Ninh', 'Huyện Hòa Thành', 'Xã Long Thành Nam', 'Chờ người nơi ấy', 1, 47500000, NULL, 1606610541029),
-(107, 0, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 2, 27010000, NULL, NULL),
-(108, 4, 45, 'thùy trang', '0967123456', 'Thành phố Hồ Chí Minh', 'Quận 7', 'Phường Tân Thuận Đông', 'mèo méo meo', 2, 11790000, NULL, 1600781638651),
-(109, 4, 41, 'Nguyễn Văn Thắng', '0326566821', 'Thành phố Hồ Chí Minh', 'Quận 8', 'Phường 06', '252 Bùi Minh Trực', 3, 44040000, NULL, 1602732370990),
-(110, 1, 41, 'Nguyễn Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắngcufctc', 2, 36000000, NULL, 1602859586655),
-(111, 4, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 3, 17580000, NULL, 1603163605597),
-(112, 4, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 3, 142500000, NULL, 1603168113475),
-(113, 4, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 11, 188506000, NULL, 1603180606113),
-(114, -1, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 5, 6950000, NULL, 1603188140370),
-(115, -1, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 5, 6950000, NULL, 1603188504542),
-(116, -1, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 7, 9730000, NULL, 1603188772384),
-(117, -1, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 5, 6950000, NULL, 1603188932442),
-(118, 4, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 3, 5201000, NULL, 1603215149521),
-(119, 0, 47, NULL, NULL, NULL, NULL, NULL, NULL, 1, 5841000, NULL, NULL),
-(120, 4, 49, 'thang', '1', 'Thành phố Hà Nội', 'Huyện Gia Lâm', 'Thị trấn Trâu Quỳ', '1234 bnd', 2, 7593000, NULL, 1606365435581),
-(121, -1, 41, 'Nguyễn Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 6, 75750000, NULL, 1603818345840),
-(122, 4, 41, 'Nguyễn Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 9, 70430000, NULL, 1606381702111),
-(128, 1, 41, 'Nguyễn Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 2, 19950000, NULL, 1606553092493),
-(129, 4, 49, 'Thắng xinh zai', '0326566821', 'Thành phố Hà Nội', 'Huyện Gia Lâm', 'Thị trấn Trâu Quỳ', '1234 bnd', 7, 71113000, NULL, 1606365572739),
-(130, 4, 49, 'thangbnm hkkk', '0321526586', 'Thành phố Hà Nội', 'Huyện Gia Lâm', 'Thị trấn Trâu Quỳ', '1234 bnd', 2, 21000000, NULL, 1606375063936),
-(131, 0, 44, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL);
+INSERT INTO `transact` (`id`, `status`, `id_user`, `user_name`, `user_phone`, `province`, `district`, `ward`, `address`, `qty`, `amount`, `message`, `created`, `modified`) VALUES
+(87, 4, 41, 'Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 2, 7380000, NULL, '2020-12-02 13:29:31', NULL),
+(88, 4, 41, 'Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 3, 11070000, NULL, '2020-12-02 13:29:31', NULL),
+(89, -1, 41, 'Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 1, 2790000, NULL, '2020-12-02 13:29:31', NULL),
+(90, 4, 42, 'Thắng Nguyễn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 2, 12040000, NULL, '2020-12-02 13:29:31', NULL),
+(92, -1, 42, 'Thắng Nguyễn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 3, 63190000, NULL, '2020-12-02 13:29:31', NULL),
+(93, 4, 42, 'Thắng Nguyễn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 8, 38340000, NULL, '2020-12-02 13:29:31', NULL),
+(94, 4, 42, 'Thắng Nguyễn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 2, 43390000, NULL, '2020-12-02 13:29:31', NULL),
+(95, 1, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 1, 15010000, NULL, '2020-12-02 13:29:31', NULL),
+(96, 1, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 5, 144500000, NULL, '2020-12-02 13:29:31', NULL),
+(97, 4, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 32, 105732000, NULL, '2020-12-02 13:29:31', NULL),
+(98, 2, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 3, 14580000, NULL, '2020-12-02 13:29:31', NULL),
+(99, 3, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 13, 199133000, NULL, '2020-12-02 13:29:31', NULL),
+(100, 1, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 1, 9990000, NULL, '2020-12-02 13:29:31', NULL),
+(101, 4, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 3, 30000000, NULL, '2020-12-02 13:29:31', NULL),
+(102, 1, 43, 'Thắng pro', '0967244081', 'Tỉnh Bình Định', 'Huyện Tuy Phước', 'Xã Phước Nghĩa', 'cung nam', 10, 123580000, NULL, '2020-12-02 13:29:31', NULL),
+(103, 1, 43, 'Thắng pro', '0967244081', 'Tỉnh Bình Định', 'Huyện Tuy Phước', 'Xã Phước Nghĩa', 'cung nam', 1, 28900000, NULL, '2020-12-02 13:29:31', NULL),
+(104, 0, 43, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL),
+(105, -1, 44, 'Hồ Phạm Ngọc Thạch', '0778889076', 'Tỉnh Tây Ninh', 'Huyện Hòa Thành', 'Xã Long Thành Nam', 'Chờ người nơi ấy', 2, 25960000, NULL, '2020-12-02 13:29:31', NULL),
+(106, 1, 44, 'Hồ Phạm Ngọc Thạch', '0778889076', 'Tỉnh Tây Ninh', 'Huyện Hòa Thành', 'Xã Long Thành Nam', 'Chờ người nơi ấy', 1, 47500000, NULL, '2020-12-02 13:29:31', NULL),
+(107, 0, 42, 'Thắng Nguyễn Văn', '0321234567', 'Thành phố Đà Nẵng', 'Huyện Hòa Vang', 'Xã Hòa Nhơn', 'q q', 2, 27010000, NULL, NULL, NULL),
+(108, 4, 45, 'thùy trang', '0967123456', 'Thành phố Hồ Chí Minh', 'Quận 7', 'Phường Tân Thuận Đông', 'mèo méo meo', 2, 11790000, NULL, '2020-12-02 13:29:31', NULL),
+(109, 4, 41, 'Nguyễn Văn Thắng', '0326566821', 'Thành phố Hồ Chí Minh', 'Quận 8', 'Phường 06', '252 Bùi Minh Trực', 3, 44040000, NULL, '2020-12-02 13:29:31', NULL),
+(110, 1, 41, 'Nguyễn Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắngcufctc', 2, 36000000, NULL, '2020-12-02 13:29:31', NULL),
+(111, 4, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 3, 17580000, NULL, '2020-12-02 13:29:31', NULL),
+(112, 4, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 3, 142500000, NULL, '2020-12-02 13:29:31', NULL),
+(113, 4, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 11, 188506000, NULL, '2020-12-02 13:29:31', NULL),
+(114, -1, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 5, 6950000, NULL, '2020-12-02 13:29:31', NULL),
+(115, -1, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 5, 6950000, NULL, '2020-12-02 13:29:31', NULL),
+(116, -1, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 7, 9730000, NULL, '2020-12-02 13:29:31', NULL),
+(117, -1, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 5, 6950000, NULL, '2020-12-02 13:29:31', NULL),
+(118, 4, 41, 'Nguyễn Văn Thắngggg', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 3, 5201000, NULL, '2020-12-02 13:29:31', NULL),
+(119, 0, 47, NULL, NULL, NULL, NULL, NULL, NULL, 1, 5841000, NULL, NULL, NULL),
+(120, 4, 49, 'thang', '1', 'Thành phố Hà Nội', 'Huyện Gia Lâm', 'Thị trấn Trâu Quỳ', '1234 bnd', 2, 7593000, NULL, '2020-12-02 13:29:31', NULL),
+(121, -1, 41, 'Nguyễn Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 6, 75750000, NULL, '2020-12-02 13:29:31', NULL),
+(122, 4, 41, 'Nguyễn Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 9, 70430000, NULL, '2020-12-02 13:29:31', NULL),
+(128, 1, 41, 'Nguyễn Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 2, 19950000, NULL, '2020-12-02 13:29:31', NULL),
+(129, 4, 49, 'Thắng xinh zai', '0326566821', 'Thành phố Hà Nội', 'Huyện Gia Lâm', 'Thị trấn Trâu Quỳ', '1234 bnd', 7, 71113000, NULL, '2020-12-02 13:29:31', NULL),
+(130, 4, 49, 'thangbnm hkkk', '0321526586', 'Thành phố Hà Nội', 'Huyện Gia Lâm', 'Thị trấn Trâu Quỳ', '1234 bnd', 2, 21000000, NULL, '2020-12-02 13:29:31', NULL),
+(131, 0, 44, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL),
+(132, 4, 41, 'Nguyễn Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 3, 58500000, NULL, '2020-12-02 13:29:31', NULL),
+(133, 4, 41, 'Nguyễn Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 6, 48500000, NULL, '2020-12-02 13:29:31', NULL),
+(134, 1, 49, 'thang', '1', 'Thành phố Hà Nội', 'Huyện Gia Lâm', 'Thị trấn Trâu Quỳ', '1234 bnd', 1, 47500000, NULL, '2020-12-02 13:29:31', NULL),
+(135, -1, 41, 'Nguyễn Văn Thắngggg', '0326566822', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Tân', '30 thắng', 1, 9000000, NULL, '2020-12-02 14:07:25', '2020-12-02 14:08:38'),
+(136, 0, 41, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1073,7 +1047,17 @@ INSERT INTO `viewed_product` (`id`, `idProduct`, `idUser`) VALUES
 (107, 16, 44),
 (108, 20, 44),
 (109, 23, 44),
-(110, 3, 44);
+(110, 3, 44),
+(111, 47, 41),
+(112, 63, 41),
+(113, 65, 41),
+(114, 66, 41),
+(115, 64, 41),
+(116, 27, 49),
+(117, 16, 49),
+(118, 19, 49),
+(119, 28, 49),
+(120, 4, 49);
 
 --
 -- Indexes for dumped tables
@@ -1215,7 +1199,7 @@ ALTER TABLE `image_product`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=328;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=338;
 
 --
 -- AUTO_INCREMENT for table `product`
@@ -1227,7 +1211,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `rate`
 --
 ALTER TABLE `rate`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT for table `searches`
@@ -1239,7 +1223,7 @@ ALTER TABLE `searches`
 -- AUTO_INCREMENT for table `transact`
 --
 ALTER TABLE `transact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -1251,7 +1235,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `viewed_product`
 --
 ALTER TABLE `viewed_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 
 --
 -- Constraints for dumped tables
