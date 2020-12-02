@@ -33,7 +33,7 @@ if(isset($_POST['idParents'])){
 if(isset($_POST['status']) && $_POST['idUser']){
 	$status = $_POST['status'];
 	$id_user = $_POST['idUser'];
-	$query = "SELECT product.* FROM transact INNER JOIN orders ON transact.id = orders.idTransact, product WHERE product.id = orders.idProduct and transact.status='$status' and transact.id_user = '$id_user' GROUP BY orders.idProduct ";
+	$query = "SELECT product.* FROM transact INNER JOIN orders ON transact.id = orders.idTransact, product WHERE product.id = orders.idProduct and transact.status='$status' and transact.id_user = '$id_user' GROUP BY orders.idProduct ORDER BY transact.created DESC";
 }
 
 if(isset($_POST['idArray'])){
@@ -43,7 +43,7 @@ if(isset($_POST['idArray'])){
 
 	$first = 0;
 
-	$query = "SELECT * FROM product WHERE ";
+	$query = "SELECT product.* FROM product WHERE (";
 	foreach ($idArray as $value ) {
 		if($first==0){
 			$first =1;
@@ -52,8 +52,9 @@ if(isset($_POST['idArray'])){
 			$query = $query . "OR";
 		}
 
-		$query = $query . " id = '$value' "; 
+		$query = $query . " product.id = '$value' "; 
 	}
+	$query = $query. ")";
 }
 
 if(isset($_POST['priceFrom'])){
@@ -87,6 +88,16 @@ if(isset($_POST['orderCreated'])){
 else if(isset($_POST['orderPrice'])){
     $orderPrice = $_POST['orderPrice'];
     $query = $query . " ORDER BY (price - price*discount/100) $orderPrice ";
+}
+
+if(isset($_POST['orderRate'])){
+    $orderRate = $_POST['orderRate'];
+    $query = $query . " ORDER BY rate $orderRate,  rateQty DESC ";
+}
+
+if(isset($_POST['orderDiscount'])){
+    $orderDiscount = $_POST['orderDiscount'];
+    $query = $query . " ORDER BY discount $orderDiscount ";
 }
 
 

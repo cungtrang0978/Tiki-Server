@@ -144,6 +144,17 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 			}
 			$query = $query . " created = '$created' ";
 		}
+		
+        if(isset($_POST['modified'])){
+			$modified = $_POST['modified'];
+			if($check_indexFirst==0){
+				$check_indexFirst =1;
+			}else{
+		//if not first, insert ','
+				$query = $query . ",";
+			}
+			$query = $query . " modified = '$modified' ";
+		}
 
 
 		$query = $query . " WHERE id = '$idTransact' ";

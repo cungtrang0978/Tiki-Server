@@ -59,7 +59,8 @@ FROM transact
 	JOIN (SELECT image_product.* FROM image_product GROUP by image_product.idProduct) as ip on ip.idProduct = product.id
     JOIN (SELECT user.id, user.name FROM user) as user ON user.id = rate.idUser
 WHERE transact.status=4 and transact.id_user = $idUser and rate.idUser= $idUser
-GROUP by product.id";
+GROUP by product.id 
+ORDER BY rate.createdAt DESC";
 		}
 
 
