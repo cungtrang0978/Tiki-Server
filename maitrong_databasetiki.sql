@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 02, 2020 at 10:31 PM
+-- Generation Time: Dec 03, 2020 at 12:43 PM
 -- Server version: 10.3.25-MariaDB-log-cll-lve
 -- PHP Version: 7.3.6
 
@@ -596,7 +596,9 @@ INSERT INTO `orders` (`id`, `idTransact`, `idProduct`, `qty`, `amount`) VALUES
 (332, 133, 65, 1, 8000000),
 (333, 133, 66, 3, 22500000),
 (334, 134, 20, 1, 47500000),
-(337, 135, 76, 1, 9000000);
+(337, 135, 76, 1, 9000000),
+(338, 136, 65, 1, 8000000),
+(339, 136, 64, 1, 8000000);
 
 -- --------------------------------------------------------
 
@@ -684,8 +686,8 @@ INSERT INTO `product` (`id`, `idCatalog`, `name`, `description`, `price`, `disco
 (61, 7, 'Điện thoại Vivo X50\r\n', 'Thiết kế bắt xu thế với màn hình Infinity-O, nâng cao khả năng hiển thị với độ phân giải Full HD+, cho không gian sử dụng thoải mái, trải nghiệm hình ảnh sống động với các bộ phim, video ca nhạc, dễ dàng đọc sách báo hằng ngày.', 12000000, 0, 0, 0, 100, 0, 0),
 (62, 7, 'Điện thoại Vivo V19', 'Vivo V19 sở hữu một thiết kế hiện đại bắt kịp xu hướng smartphone mới hiện nay. Mặt trước là một màn hình tràn viền chuẩn mực với bảo mật vân tay đặt dưới màn hình.', 8500000, 0, 0, 0, 100, 0, 0),
 (63, 8, 'Điện thoại Realme 7 Pro', 'Realme 7 Pro sở hữu cụm 4 camera được thiết kế nằm dọc ở sau mặt lưng với cảm biến chính 64 MP được tích hợp các tính năng đa dụng như camera xóa phông, chụp toàn cảnh (Panorama), HDR,... mang đến độ sắc nét, chất lượng cho mỗi bức ảnh.', 9000000, 0, 0, 0, 98, 4, 1),
-(64, 8, 'Điện thoại Realme 6 Pro', 'Ấn tượng đầu tiên của Realme 6 Pro chính là hệ thống 6 camera, gồm cụm 4 camera sau và 2 camera trước đục lỗ hình viên thuốc, tương tự như trên các mẫu flagship cao cấp hiện nay.', 8000000, 0, 0, 0, 100, 0, 0),
-(65, 8, 'Điện thoại Realme 7', 'Mặt sau của máy lấy cảm hứng từ không gian gương trong tự nhiên, Realme 7 có thiết kế gương rực rỡ. Sự chia cắt táo bạo mang đến một tác động thị giác mới với hiệu ứng ánh sáng tuyệt đẹp, vẻ đẹp tự nhiên cân bằng được bộc lộ.\r\n\r\n', 8000000, 0, 0, 0, 98, 2, 1),
+(64, 8, 'Điện thoại Realme 6 Pro', 'Ấn tượng đầu tiên của Realme 6 Pro chính là hệ thống 6 camera, gồm cụm 4 camera sau và 2 camera trước đục lỗ hình viên thuốc, tương tự như trên các mẫu flagship cao cấp hiện nay.', 8000000, 0, 0, 0, 99, 0, 0),
+(65, 8, 'Điện thoại Realme 7', 'Mặt sau của máy lấy cảm hứng từ không gian gương trong tự nhiên, Realme 7 có thiết kế gương rực rỡ. Sự chia cắt táo bạo mang đến một tác động thị giác mới với hiệu ứng ánh sáng tuyệt đẹp, vẻ đẹp tự nhiên cân bằng được bộc lộ.\r\n\r\n', 8000000, 0, 0, 0, 97, 2, 1),
 (66, 8, 'Điện thoại Realme 7i\r\n', 'Realme 7i cho cảm giác cầm khá thoải mái, nhẹ tênh với 4 cạnh viền bo cong, mặt lưng làm từ nhựa cho trọng lượng máy nhẹ hơn, trong khi mặt trước được bảo vệ bằng kính cường lực Gorilla Glass 3 ngăn ngừa tối đa các tổn hại ở màn hình khi làm rơi rớt, va chạm.\r\n\r\n', 7500000, 0, 0, 0, 97, 3, 1),
 (67, 9, 'Điện thoại Huawei Nova 7i (Nền tảng Huawei Mobile Service)', 'Điện thoại tầm trung Huawei Nova 7i được trang bị màn hình kích thước 6.4 inch độ phân giải Full HD+ với điểm nhấn chính là màn hình khoét lỗ nằm bên trái để đặt camera trước.\r\n\r\n', 6000000, 0, 0, 0, 98, 5, 1),
 (68, 9, 'Điện thoại Huawei Y6p (Nền tảng Huawei Mobile Service)\r\n', 'Mặt lưng của Huawei Y6p được thiết kế ấn tượng bằng chất liệu nhựa giả kính cao cấp với họa tiết các đường ánh sáng cong mượt mà thay đổi dưới nhiều góc độ khác nhau.\r\n\r\n', 3500000, 0, 0, 0, 98, 5, 1),
@@ -884,7 +886,7 @@ INSERT INTO `transact` (`id`, `status`, `id_user`, `user_name`, `user_phone`, `p
 (133, 4, 41, 'Nguyễn Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 6, 48500000, NULL, '2020-12-02 13:29:31', NULL),
 (134, 1, 49, 'thang', '1', 'Thành phố Hà Nội', 'Huyện Gia Lâm', 'Thị trấn Trâu Quỳ', '1234 bnd', 1, 47500000, NULL, '2020-12-02 13:29:31', NULL),
 (135, -1, 41, 'Nguyễn Văn Thắngggg', '0326566822', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Tân', '30 thắng', 1, 9000000, NULL, '2020-12-02 14:07:25', '2020-12-02 14:08:38'),
-(136, 0, 41, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL);
+(136, 1, 41, 'Nguyễn Văn Thắng', '0326566821', 'Tỉnh Bình Dương', 'Huyện Dầu Tiếng', 'Xã Minh Hoà', '30 thắng', 2, 16000000, NULL, '2020-12-03 05:32:15', NULL);
 
 -- --------------------------------------------------------
 
@@ -1199,7 +1201,7 @@ ALTER TABLE `image_product`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=338;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=340;
 
 --
 -- AUTO_INCREMENT for table `product`
