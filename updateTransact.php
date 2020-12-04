@@ -14,6 +14,10 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 			if(isset($row_get)){
 				$amount = $row_get['amount'];
 				$qty = $row_get['qty'];
+				if($amount === "null" && $qty === "null"){
+					$amount = 0; 
+					$qty = 0;
+				}
 				$query_update = "UPDATE `transact` SET `qty`= $qty,`amount`= $amount WHERE `id` = $idTransact";
 				if (mysqli_query($connect, $query_update)){
 					echo "update_success";
