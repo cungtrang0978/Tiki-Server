@@ -8,14 +8,14 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 	$idTransact = $_POST['idTransact'];
 
 	if($code === $CODE_UPDATE_PRICE){
-		$query_get = "SELECT SUM(qty) AS qty, SUM(amount) AS amount FROM orders WHERE idTransact = '$idTransact'";
+		$query_get = "SELECT SUM(qty) AS qty, SUM(amount) AS amount FROM `orders` WHERE idTransact = '$idTransact'";
 		if($data_get = mysqli_query($connect, $query_get)){
 			$row_get = mysqli_fetch_assoc($data_get);
 			if(isset($row_get)){
 				$amount = $row_get['amount'];
 				$qty = $row_get['qty'];
-				$query_update = "UPDATE transact SET qty = '$qty', amount = '$amount' WHERE id = '$idTransact'";
-				if ($data_update = mysqli_query($connect, $query_update)){
+				$query_update = "UPDATE `transact` SET `qty`= $qty,`amount`= $amount WHERE `id` = $idTransact";
+				if (mysqli_query($connect, $query_update)){
 					echo "update_success";
 				}else echo "update_fail";
 			}else echo "non_value";
