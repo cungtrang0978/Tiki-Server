@@ -14,7 +14,7 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 			if(isset($row_get)){
 				$amount = $row_get['amount'];
 				$qty = $row_get['qty'];
-				if($amount === "null" && $qty === "null"){
+				if($amount == null && $qty == null){
 					$amount = 0; 
 					$qty = 0;
 				}
