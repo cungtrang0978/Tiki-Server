@@ -1,5 +1,11 @@
 <?php
 require "dbCon.php";
+class User{
+	function User($id, $roleId){
+		$this->id = $id;
+		$this->roleId = $roleId;
+	}
+}
 if(isset($_POST['username']) && isset($_POST['password'])){
 
 	$_username = $_POST['username'];
@@ -9,11 +15,11 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 				// $fieldcount=mysqli_num_fields($data);
 		$row = mysqli_fetch_assoc($data);
 		if(isset($row)){
-			$query2 = "SELECT id FROM user WHERE (phoneNumber = '$_username' OR email = '$_username') AND password = '$_password'";
+			$query2 = "SELECT id, roleId FROM user WHERE (phoneNumber = '$_username' OR email = '$_username') AND password = '$_password'";
 			if($data2 = mysqli_query($connect, $query2)){
 				$row2 = mysqli_fetch_assoc($data2);
 				if(isset($row2)){
-					echo $row2['id'];	
+					echo new User($row2['id'], $row2['roleId']);
 				}
 				else{
 					echo "wrong password";
