@@ -3,7 +3,8 @@
 require "dbCon.php";
 
 class User{
-	function User($id, $name, $phoneNumber, $email, $password, $sex, $province, $district, $ward, $address, $imageUrl, $created, $birthdate){
+	function User($id, $name, $phoneNumber, $email, $password, $sex, $province, $district, 
+		$ward, $address, $imageUrl, $created, $birthdate, $roleId, $amount){
 		$this->id = $id;
 		$this->name = $name;
 		$this->phoneNumber = $phoneNumber;
@@ -17,6 +18,8 @@ class User{
 		$this->imageUrl = $imageUrl;
 		$this->created = $created;
 		$this->birthdate = $birthdate;
+		$this->roleId = $roleId;
+		$this->amount = $amount;
 
 	}
 }
@@ -39,7 +42,10 @@ if(isset($_POST['idUser'])){
 				$row['address'], 
 				$row['imageUrl'], 
 				$row['created'],
-				$row['birthdate']);
+				$row['birthdate'],
+				$row['roleId'],
+				$row['amount'],
+			);
 			echo json_encode($user);
 		}
 		else{

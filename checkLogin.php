@@ -10,11 +10,14 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 
 	$_username = $_POST['username'];
 	$_password = $_POST['password'];
+
+	//check exist
 	$query = "SELECT id, roleId FROM user WHERE phoneNumber like '$_username' or email like '$_username'";
 	if ($data = mysqli_query($connect, $query)) {
 				// $fieldcount=mysqli_num_fields($data);
 		$row = mysqli_fetch_assoc($data);
 		if(isset($row)){
+			//get id and role
 			$query2 = "SELECT id, roleId FROM user WHERE (phoneNumber = '$_username' OR email = '$_username') AND password = '$_password'";
 			if($data2 = mysqli_query($connect, $query2)){
 				$row2 = mysqli_fetch_assoc($data2);
