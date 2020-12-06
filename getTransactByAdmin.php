@@ -32,14 +32,19 @@ class Transact{
 
 $query_get = "SELECT * FROM transact ";
 
-
 if(isset($_POST['status'])){
 	$status = $_POST['status'];
 
 	$query_get = "SELECT transact.*
 		FROM transact 
-		WHERE status= $status  
-		ORDER BY `transact`.`modified` ASC, `transact`.`created` ASC ";
+		WHERE status= $status ";
+
+	if($status==1){
+		$query_get = $query_get . "ORDER BY `transact`.`modified` ASC, `transact`.`created` ASC ";
+	}else{
+		$query_get = $query_get . "ORDER BY `transact`.`modified` DESC, `transact`.`created` DESC ";
+	}
+
 	if(isset($_POST['start']) && isset($_POST['limit'])){
 		$start = $_POST['start'];
 		$limit = $_POST['limit'];
@@ -47,7 +52,6 @@ if(isset($_POST['status'])){
 		$query_get = $query_get . " LIMIT $start, $limit";
 	}
 }
-
 
 if($data_get = mysqli_query($connect, $query_get)){
 	$arrayTransact = array();
@@ -72,6 +76,4 @@ if($data_get = mysqli_query($connect, $query_get)){
 	}
 	echo json_encode($arrayTransact);
 }else echo "wrong_query";
-
-
 ?>

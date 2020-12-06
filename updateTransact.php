@@ -160,7 +160,6 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 			$query = $query . " modified = '$modified' ";
 		}
 
-
 		$query = $query . " WHERE id = '$idTransact' ";
 
 		if (mysqli_query($connect, $query)) {
