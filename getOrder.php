@@ -2,18 +2,28 @@
 require "dbCon.php";
 
 class Orders{
-	function Orders($id, $idTransact, $idProduct, $qty, $amount){
+	function Orders($id, $idTransact, $idProduct, $qty, $amount, $name, $price, $discount, $imageUrl){
 		$this->id = $id;
 		$this->idTransact = $idTransact;
 		$this->idProduct = $idProduct;
 		$this->qty = $qty;
 		$this->amount = $amount;
+		$this->name = $name;
+		$this->price = $price;
+		$this->discount = $discount;
+		$this->imageUrl = $imageUrl;
 	}
 }
 
 if(isset($_POST['idTransact'])){
 	$idTransact = $_POST['idTransact'];
-	$query_select = "SELECT * FROM orders WHERE idTransact = '$idTransact' ORDER bY id DESC";
+	$query_select = "SELECT orders.*, product.name, product.price, product.discount, image_product.imageUrl
+					FROM `orders` 
+						JOIN  (SELECT product.id, product.name, product.price, product.discount FROM product) as product ON product.id = orders.idProduct 
+						JOIN image_product on  image_product.idProduct = product.id
+					WHERE orders.idTransact = $idTransact
+					GROUP BY product.id
+					ORDER BY `orders`.`idProduct` DESC";
 	
 	if($data = mysqli_query($connect, $query_select)){
 		$arrayOrder = array();
@@ -23,7 +33,11 @@ if(isset($_POST['idTransact'])){
 					$row['idTransact'],
 					$row['idProduct'],
 					$row['qty'],
-					$row['amount']
+					$row['amount'],
+					$row['name'],
+					$row['price'],
+					$row['discount'],
+					$row['imageUrl']
 				));
 		}
 		echo json_encode($arrayOrder);
