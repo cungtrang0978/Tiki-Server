@@ -37,12 +37,14 @@ class Product{
 		while ($row = mysqli_fetch_assoc($dataIdCatalogs)){
 			// array_push($arrayIdCatalog, new Product($row['id'], $row['idCatalog'], $row['name'], $row['price'], $row['discount'], $row['qty'], $row['imageUrl']));
 			$idCatalog = $row['id'];
-			if(index==0)
+			if($index==0){
 				$limit = 10;
-			else if(index==1){
+			}
+			else if($index==1){
 				$limit = 6;
-			}else if(index==2)
+			}else if($index==2){
 				$limit = 4;
+			}
 
 			$query_getProducts = "SELECT product.id, product.idCatalog, product.name,
 			 product.price, product.discount, product.qty, product.rate, product.rateQty, sum(orders.qty) as sold, ip.imageUrl

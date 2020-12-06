@@ -3,7 +3,7 @@
 
 
 class Product{
-	function Product($id, $idCatalog, $name, $price, $discount, $qty, $imageUrl, $sold,  $rate, $rateQty){
+	function Product($id, $idCatalog, $name, $price, $discount, $qty, $imageUrl,  $rate, $rateQty){
 		$this->id = $id;
 		$this->idCatalog = $idCatalog;
 		$this->name = $name;
@@ -11,7 +11,6 @@ class Product{
 		$this->discount = $discount;
 		$this->qty = $qty;
 		$this->imageUrl = $imageUrl;
-		$this->sold = $sold;		
 		$this->rate = $rate;		
 		$this->rateQty = $rateQty;		
 	}
@@ -33,7 +32,7 @@ class Product{
 		$arrayProducts = array();
 
 		while ($row = mysqli_fetch_assoc($dataIdCatalogs)){
-			array_push($arrayProducts, new Product($row['id'], $row['idCatalog'], $row['name'], $row['price'], $row['discount'], $row['qty'], $row['imageUrl'], $row['sold'], $row['rate'], $row['rateQty']));
+			array_push($arrayProducts, new Product($row['id'], $row['idCatalog'], $row['name'], $row['price'], $row['discount'], $row['qty'], $row['imageUrl'], $row['rate'], $row['rateQty']));
 		}
 		echo json_encode($arrayProducts);
 	}
