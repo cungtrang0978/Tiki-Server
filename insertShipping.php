@@ -25,7 +25,7 @@ if(isset($_POST['idTransact'])){
 			//insert
 			$query_insert_shipping = "INSERT INTO `shipping`(`idTransact`, `idShipper`) VALUES ('$idTransact', '$idShipper')";
 			if(mysqli_query($connect, $query_insert_shipping)){
-				echo "insert_success";
+				echo $idShipper;
 			} else echo "insert_fail";
 		}else{
 			//count shipper
@@ -37,7 +37,7 @@ if(isset($_POST['idTransact'])){
 		
 					//get userId of shiiper has oldest transact.
 					$query3 ="SELECT shipping.idShipper FROM (SELECT shipping.* FROM `shipping`
-      				                  ORDER BY shipping.id DESC
+      				                  ORDER BY `shipping`.`id` DESC
       				                  LIMIT $count) as shipping
 							ORDER BY `shipping`.`id` ASC                        
 							LIMIT 1";
@@ -48,7 +48,7 @@ if(isset($_POST['idTransact'])){
 							//insert
 							$query_insert_shipping = "INSERT INTO `shipping`(`idTransact`, `idShipper`) VALUES ('$idTransact', '$idShipper')";
 							if(mysqli_query($connect, $query_insert_shipping)){
-								echo "insert_success";
+								echo $idShipper;
 							} else echo "insert_fail";
 						}
 					}

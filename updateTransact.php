@@ -160,6 +160,17 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 			$query = $query . " modified = '$modified' ";
 		}
 
+		if(isset($_POST['idShipper'])){
+			$idShipper = $_POST['idShipper'];
+			if($check_indexFirst==0){
+				$check_indexFirst =1;
+			}else{
+		//if not first, insert ','
+				$query = $query . ",";
+			}
+			$query = $query . " idShipper = '$idShipper' ";
+		}
+
 		$query = $query . " WHERE id = '$idTransact' ";
 
 		if (mysqli_query($connect, $query)) {
