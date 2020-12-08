@@ -8,7 +8,6 @@ class Transact{
 	// 	$this->amount = $amount;
 	// }
 
-	
 	function Transact($id, $status, $id_user, $user_name, $user_phone, $province, $district,
 		 $ward, $address, $qty, $amount, $message, $created, $modified, $shippingFee, $idShipper)
 	{	
@@ -34,34 +33,28 @@ class Transact{
 
 $query_get = "SELECT * FROM transact ";
 
-if(isset($_POST['idTransact'])){
-	$idTransact = $_POST['idTransact'];
+if(isset($_POST['status']) && isset($_POST['idShipper'])){
+	$status = $_POST['status'];
+	$idShipper = $_POST['idShipper'];
 
-	$query_get = "SELECT * FROM transact WHERE id = '$idTransact'";	
-}else if(isset($_POST['id_user'])){
-	$query_get = $query_get . " WHERE ";
-	$first = 0;
-	if(isset($_POST['status'])){
-		$status = $_POST['status'];
-		if($first==0){
-			$first=1;
-		}else {
-			$query_get = $query_get . " and ";
-		}
-		$query_get = $query_get . " status = '$status'";
-	}
-	if(isset($_POST['id_user'])){
-		$id_user = $_POST['id_user'];
-		if($first==0){
-			$first=1;
-		}else {
-			$query_get = $query_get . " and ";
-		}
-		$query_get = $query_get . " id_user = '$id_user'";
+	$query_get = "SELECT transact.*
+		FROM transact 
+		WHERE status= $status AND idShipper = $idShipper ";
+
+		$query_get = $query_get . " ORDER BY `transact`.`modified` ASC, `transact`.`created` ASC ";
+	// if($status==1){
+	// 	$query_get = $query_get . "ORDER BY `transact`.`modified` ASC, `transact`.`created` ASC ";
+	// }else{
+	// 	$query_get = $query_get . "ORDER BY `transact`.`modified` DESC, `transact`.`created` DESC ";
+	// }
+
+	if(isset($_POST['start']) && isset($_POST['limit'])){
+		$start = $_POST['start'];
+		$limit = $_POST['limit'];
+
+		$query_get = $query_get . " LIMIT $start, $limit";
 	}
 }
-
-$query_get = $query_get . " ORDER BY id DESC";
 
 if($data_get = mysqli_query($connect, $query_get)){
 	$arrayTransact = array();
@@ -87,6 +80,4 @@ if($data_get = mysqli_query($connect, $query_get)){
 	}
 	echo json_encode($arrayTransact);
 }else echo "wrong_query";
-
-
 ?>

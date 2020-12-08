@@ -9,7 +9,7 @@ class Transact{
 	// }
 
 	function Transact($id, $status, $id_user, $user_name, $user_phone, $province, $district,
-		 $ward, $address, $qty, $amount, $message, $created, $modified, $shippingFee)
+		 $ward, $address, $qty, $amount, $message, $created, $modified, $shippingFee, $idShipper)
 	{	
 		$this->id = $id;
 		$this->status = $status;
@@ -26,6 +26,7 @@ class Transact{
 		$this->created = $created;
 		$this->modified = $modified;
 		$this->shippingFee = $shippingFee;
+		$this->idShipper = $idShipper;
 	}
 
 }
@@ -71,7 +72,8 @@ if($data_get = mysqli_query($connect, $query_get)){
 			$row['message'],
 			$row['created'],
 			$row['modified'],
-			$row['shippingFee']
+			$row['shippingFee'],
+			$row['idShipper']
 		));
 	}
 	echo json_encode($arrayTransact);
