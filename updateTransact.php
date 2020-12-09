@@ -28,6 +28,8 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 	elseif($code === $CODE_UPDATE_TRANSACT){
 		$query = "UPDATE transact SET ";
 		$check_indexFirst = 0;
+
+		$success_transact= false;
 		if(isset($_POST['status'])){
 			$status = $_POST['status'];
 			if($check_indexFirst==0){
@@ -37,6 +39,10 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 				$query = $query . ",";
 			}
 			$query = $query . " status = '$status' ";
+
+			if($status==4){
+				$success_transact = true;
+			}
 		}
 
 		if(isset($_POST['user_name'])){
@@ -174,7 +180,62 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 		$query = $query . " WHERE id = '$idTransact' ";
 
 		if (mysqli_query($connect, $query)) {
-			echo "update_success";
+			if($success_transact==true){
+
+				//get transact by transact's Id
+				$query_get_transact = "SELECT transact.* FROM transact WHERE transact.id = $idTransact";
+				if($data_get_transact = mysql_query($connect, $query_get_transact)){
+					$row_get_transact = mysqli_fetch_assoc($data_get_transact);
+					if(isset($row_get_transact)){
+						$amount = $row_get_transact['amount'];
+						$shippingFee = $row_get_transact['shippingFee'];
+						$idUser = $row_get_transact['id_user'];
+						$idShipper = $row_get_transact['idShipper'];
+
+
+						//get admin's id then update admin
+						$query_get_idAdmin = "SELECT user.id FROM user WHERE user.roleId = 0";
+						if($data_get_idAdmin = mysql_query($connect, $query_get_idAdmin)){
+							$row_get_idAdmin = mysqli_fetch_assoc($data_get_idAdmin);
+							if(isset($row_get_idAdmin)){
+								$idAdmin = $row_1['id'];
+
+								//update admin
+								$query_update_admin = "UPDATE user SET user.amount  =  user.amount + $amount WHERE user.id = $idAdmin";
+								if(mysqli_query($connect, $query_update_admin)){
+
+									//update minus account of user
+									$query_update_user = "UPDATE user SET user.amount  =  user.amount - ($amount+ $shippingFee) WHERE user.id = $idUser";
+									if(mysqli_query($connect, $query_update_user)){
+
+										//update account shipper
+										$query_update_shipper = "UPDATE user SET user.amount  =  user.amount + $shippingFee WHERE user.id = $idShipper";
+										if(mysqli_query($connect, $query_update_shipper)){
+											echo "update_success";
+										}else{
+											echo "update_shipper_fail";
+										}
+									}else{
+										echo "update_user_fail";
+									}
+								}else{
+									echo "update_admin_fail";
+								}
+							}else{
+								echo "cant get admin's Id ";
+							}
+						}else{
+							echo "cant get admin's Id ";
+						}
+					}else{
+						echo "cant get transact";
+					}
+				}else{
+					echo "cant get transact";
+				}
+			}else{
+				echo "update_success";
+			}
 		} else {
 			echo "update_error";
 		}
