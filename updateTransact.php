@@ -29,7 +29,7 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 		$query = "UPDATE transact SET ";
 		$check_indexFirst = 0;
 
-		$success_transact= false;
+		$success_transact = false;
 		if(isset($_POST['status'])){
 			$status = $_POST['status'];
 			if($check_indexFirst==0){
