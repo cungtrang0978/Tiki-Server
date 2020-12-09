@@ -198,7 +198,7 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 						if($data_get_idAdmin = mysql_query($connect, $query_get_idAdmin)){
 							$row_get_idAdmin = mysqli_fetch_assoc($data_get_idAdmin);
 							if(isset($row_get_idAdmin)){
-								$idAdmin = $row_get_idAdmin['id'];
+								$idAdmin = $row_1['id'];
 
 								//update admin
 								$query_update_admin = "UPDATE user SET user.amount  =  user.amount + $amount WHERE user.id = $idAdmin";
