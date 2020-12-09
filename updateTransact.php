@@ -29,7 +29,7 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 		$query = "UPDATE transact SET ";
 		$check_indexFirst = 0;
 
-		$success_transact = false;
+		$success_transact = 0;
 		if(isset($_POST['status'])){
 			$status = $_POST['status'];
 			if($check_indexFirst==0){
@@ -40,8 +40,8 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 			}
 			$query = $query . " status = '$status' ";
 
-			if($status==4){
-				$success_transact = true;
+			if($status == 4){
+				$success_transact = 1;
 			}
 		}
 
@@ -180,7 +180,7 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 		$query = $query . " WHERE id = '$idTransact' ";
 
 		if (mysqli_query($connect, $query)) {
-			if($success_transact==true){
+			if($success_transact==1){
 
 				//get transact by transact's Id
 				$query_get_transact = "SELECT transact.* FROM transact WHERE transact.id = $idTransact";
