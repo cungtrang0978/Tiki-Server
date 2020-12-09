@@ -180,11 +180,12 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 		$query = $query . " WHERE id = '$idTransact' ";
 
 		if (mysqli_query($connect, $query)) {
+			
 			if($success_transact==1){
 
 				//get transact by transact's Id
-				$query_get_transact = "SELECT transact.* FROM transact WHERE transact.id = $idTransact";
-				if($data_get_transact = mysql_query($connect, $query_get_transact)){
+				$query_get_transact = "SELECT * FROM `transact` WHERE `transact`.`id` = $idTransact";
+				if($data_get_transact = mysqli_query($connect, $query_get_transact)){
 					$row_get_transact = mysqli_fetch_assoc($data_get_transact);
 					if(isset($row_get_transact)){
 						$amount = $row_get_transact['amount'];
@@ -195,7 +196,7 @@ if(isset($_POST['idTransact']) && isset($_POST['code'])){
 
 						//get admin's id then update admin
 						$query_get_idAdmin = "SELECT user.id FROM user WHERE user.roleId = 0";
-						if($data_get_idAdmin = mysql_query($connect, $query_get_idAdmin)){
+						if($data_get_idAdmin = mysqli_query($connect, $query_get_idAdmin)){
 							$row_get_idAdmin = mysqli_fetch_assoc($data_get_idAdmin);
 							if(isset($row_get_idAdmin)){
 								$idAdmin = $row_get_idAdmin['id'];

@@ -44,7 +44,7 @@ if(isset($_POST['idUser'])){
 				$row['created'],
 				$row['birthdate'],
 				$row['roleId'],
-				$row['amount'],
+				$row['amount']
 			);
 			echo json_encode($user);
 		}
