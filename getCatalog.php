@@ -11,12 +11,16 @@ if(isset($_POST['idParents'])){
 }
 
 
-if(isset($_POST['views'])){
-	$views = $_POST['views'];
-	$query = "SELECT catalog.*
-		FROM catalog INNER JOIN product ON product.idCatalog = catalog.id
-		GROUP BY catalog.name
-		HAVING SUM(product.views)>'$views'";
+if(isset($_POST['sold'])){
+	$sold = $_POST['sold'];
+	$query = "SELECT catalog.*, COUNT(catalog.id) 
+			FROM transact INNER JOIN orders ON transact.id = orders.idTransact 
+				JOIN product ON product.id = orders.idProduct 
+    			JOIN catalog ON catalog.id = product.idCatalog 
+			WHERE  transact.status= 4 
+			GROUP BY catalog.id 
+			HAVING COUNT(catalog.id)>= $sold
+			ORDER BY COUNT(catalog.id) DESC ";
 }
 
 $data = mysqli_query($connect, $query);
