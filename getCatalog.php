@@ -13,7 +13,7 @@ if(isset($_POST['idParents'])){
 
 if(isset($_POST['sold'])){
 	$sold = $_POST['sold'];
-	$query = "SELECT catalog.*, COUNT(catalog.id) 
+	$query = "SELECT catalog.*
 			FROM transact INNER JOIN orders ON transact.id = orders.idTransact 
 				JOIN product ON product.id = orders.idProduct 
     			JOIN catalog ON catalog.id = product.idCatalog 
